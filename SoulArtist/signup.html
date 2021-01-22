@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="css/signup.css">
+  </head>
+  <body>
+    <script>
+      function myfun(){
+        var a=document.getElementById("password1").value;
+        var b=document.getElementById("password2").value;
+        if (a=="") {
+          document.getElementById("messages").innerHTML="** Please Fill Password";
+          return false;
+        }
+        if(a!=b){
+          document.getElementById("messages").innerHTML="** Password are not same";
+          return false;
+        }
+      }
+    </script>
+    <div id="login-box">
+        <div class="left-box">
+          <h1>Sign Up</h1>
+          <form onsubmit="return myfun()">
+              <input type="text" name="username" placeholder="Username">
+              <input type="text" name="email" placeholder="E-mail">
+                <input type="password" name="password" placeholder="New Password" id="password1" value="">
+                <span id="messages" style="color:red;"><span>
+                  <input type="password" name="password2" placeholder="Retype Password" id="password2" value="">
+                  <span id="messagess"><span>
+              <input type="submit" name="signup-button" value="SIGN UP">
+            </form>
+      </div>
+      <div class="right-box">
+      <span class="signinwith">Sign in with<br/>Social Network</span>
+      <button class="social facebook"><a href="https://www.facebook.com/"> Log in with Facebook </a> </button>
+      <button class="social twitter"><a href="https://twitter.com/login"> Log in with Twitter </a></button>
+      <button  class="social google"> <a href="https://accounts.google.com/signin/v2/identifier?flowName=GlifWebSignIn&flowEntry=ServiceLogin"> Log in with Google </a></button>
+      </div>
+      <div class="or">OR</div>
+    </div>
+  </body>
+</html>

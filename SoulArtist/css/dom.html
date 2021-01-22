@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <ul>
+      <li>Water</li>
+      <li id="list1">Tea</li>
+    </ul>
+    <ul id="hh">
+      <li>Coffee</li>
+      <li>Milk</li>
+    </ul>
+    <button onclick="demo()">Try</button>
+  <script>
+       function demo(){
+      var list=document.getElementById("list1");
+      var hh=document.getElementById("hh");
+      hh.appendChild(list);
+    }
+  </script>
+  </body>
+</html>
